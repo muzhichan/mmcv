@@ -438,3 +438,16 @@ def test_pickle_support():
         pkl_cfg = load(pkl_cfg_filename)
 
     assert pkl_cfg._cfg_dict == cfg._cfg_dict
+
+def mz_test_fromfile():
+    # num_classes = 19
+    # model = dict(
+    #     dict(
+    #         backbone='HRNet',
+    #         num_classes=num_classes))
+    # num_classes += 1
+    # print(num_classes)
+    # print(model)
+    filename = 'mz_hrnet.py'
+    cfg_file = osp.join(data_path, 'config', filename)
+    cfg = Config.fromfile(cfg_file)
